@@ -24,3 +24,7 @@ merge 내역 + 새로운 커밋내용까지 남아있는 것을 볼 수 있다. 
 커밋내역을 깔끔하게 하고 싶다면 [sqush](https://meetup.toast.com/posts/39) + force push 를 사용해서 정리해줄 수 있다. 리모트 메인에서 README를 수정하는 동시에 로컬 브랜치에서도 파일을 push했더니 커밋이 완전 꼬이고 꼬여버렸다;; 이것의 해결은 나중으로 ~~~ 😂
 ### -> update
 업무하면서 경험한 결과 practice2와 같은 경우 즉, 그냥 머지되지 않은 작업1 위에 또 다른 작업을 해야할 경우 작업1 브랜치에서 새로운 브랜치를 생성해도 상관이 없었다. 다만, master에 작업1 브랜치를 머지 한 후 작업2 브랜치를 머지해야지 작업 1의 내용이 딸려오지 않았다.
+
+### Practice 3 - Cherry Pick
+- development 브랜치에 이미 merge된 commit 중(일반 commit + merge commit) 일부분만 main branch로 먼저 가져오면 어떻게 될까?
+  - developmet -> main merge시, conflict를 해결해주어야 한다.(미리 main에 반영한 내용이 중복되어서) 
