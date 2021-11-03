@@ -25,7 +25,7 @@ merge 내역 + 새로운 커밋내용까지 남아있는 것을 볼 수 있다. 
 ### -> update
 업무하면서 경험한 결과 practice2와 같은 경우 즉, 그냥 머지되지 않은 작업1 위에 또 다른 작업을 해야할 경우 작업1 브랜치에서 새로운 브랜치를 생성해도 상관이 없었다. 다만, master에 작업1 브랜치를 머지 한 후 작업2 브랜치를 머지해야지 작업 1의 내용이 딸려오지 않았다.
 
-### Practice 3 - Cherry Pick
+### Practice 3 - 일부 커밋 먼저 머지하는 방법?
 - development 브랜치에 이미 merge된 commit 중(일반 commit + merge commit) 일부분만 main branch로 먼저 가져오면 어떻게 될까?
   - developmet -> main merge시, conflict를 해결해주어야 한다.(미리 main에 반영한 내용이 중복되어서) 
 - 그냥 이미 devel에 머지 되었더라도 해당 feature 브랜치를 main으로 pr, merge하면 나중에 devel -> main 머지시에는 머지 커밋만 넘어가게 되므로 내가 원하는 결과가 나옴 ✅ 
