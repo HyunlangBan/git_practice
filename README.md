@@ -28,4 +28,4 @@ merge 내역 + 새로운 커밋내용까지 남아있는 것을 볼 수 있다. 
 ### Practice 3 - Cherry Pick
 - development 브랜치에 이미 merge된 commit 중(일반 commit + merge commit) 일부분만 main branch로 먼저 가져오면 어떻게 될까?
   - developmet -> main merge시, conflict를 해결해주어야 한다.(미리 main에 반영한 내용이 중복되어서) 
-- 그냥 이미 devel에 머지 되었더라도 해당 feature 브랜치를 main으로 pr, merge하면 나중에 devel -> main 머지시에는 머지 커밋만 넘어가게 
+- 그냥 이미 devel에 머지 되었더라도 해당 feature 브랜치를 main으로 pr, merge하면 나중에 devel -> main 머지시에는 머지 커밋만 넘어가게 되므로 내가 원하는 결과가 나옴 ✅ 
