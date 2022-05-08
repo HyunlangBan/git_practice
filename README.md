@@ -29,3 +29,15 @@ merge 내역 + 새로운 커밋내용까지 남아있는 것을 볼 수 있다. 
 - development 브랜치에 이미 merge된 commit 중(일반 commit + merge commit) 일부분만 main branch로 먼저 가져오면 어떻게 될까?
   - developmet -> main merge시, conflict를 해결해주어야 한다.(미리 main에 반영한 내용이 중복되어서) 
 - 그냥 이미 devel에 머지 되었더라도 해당 feature 브랜치를 main으로 pr, merge하면 나중에 devel -> main 머지시에는 머지 커밋만 넘어가게 되므로 내가 원하는 결과가 나옴 ✅ 
+
+### Practice 4 - Hotfix
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/45524783/167299997-9be0caeb-feab-4668-8ec5-1bacab59857c.png">      
+
+- hotfix란 빠르게 해결해야 하는 버그나 바로 적용해야하는 작업이 있을때 feature branch -> development -> master 순으로 하는게 아니라 작업 내용을 바로 master, development에 반영하는 것을 의미한다.      
+- 처음에 생각해봤을때는 devel에 바로 merge(pr X) -> devel에서 main으로 pr, merge 해서 변경 사항을 적용해주면 되겠거니했는데 아니었다.(이미 pr에 길들어진 몸이라 pr빼고 생각이 안되었다...)        
+- HOW TO     
+   - 먼저 **main**에서 hotfix 브랜치를 따온다.
+   - 작업을 진행 한 뒤 commit을 하고 여기서 push가 아니라(push는 한 브랜치에만 할 수 있으므로) 위의 그림처럼 바로 main, development에 머지를 해주어야 한다.
+   - `git checkout main` -> `git merge hotfix_branch` -> `git push origin main`
+   - `git checkout development` -> `git merge hotfix_branch` -> `git push origin development`
+   - 마지막으로 hotfix 브랜치를 삭제해준다. `git branch -D hotfix_branch`
